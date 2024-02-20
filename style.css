@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6f2dbd;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.container h1 {
+  color: white;
+  font-weight: 700;
+}
+.container .start {
+  padding: 0.5rem 1.4rem;
+  font-size: 1.3rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: #14213d;
+  color: white;
+  cursor: pointer;
+}
+.container .choice,
+.container .points {
+  display: flex;
+  gap: 2rem;
+}
+.container .rock-paper-scissor {
+  display: flex;
+  gap: 2rem;
+}
+.container .rock-paper-scissor img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container p {
+  font-size: 1.5rem;
+  color: white;
+}
+.container h2 {
+  visibility: hidden;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */
