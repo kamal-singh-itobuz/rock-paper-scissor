@@ -2,19 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: #6f2dbd;
+  background-color: #001d3d;
 }
 
 .container {
-  height: 100vh;
+  position: relative;
+  top: 10rem;
+  margin: auto;
+  width: 40rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  padding: 4rem 0;
+  background-color: #9f59ee;
+  border: 0.2rem solid #14213d;
 }
 .container h1 {
   color: white;
@@ -33,6 +40,12 @@ body {
 .container .points {
   display: flex;
   gap: 2rem;
+}
+.container .choice p > span,
+.container .points p > span {
+  color: #14213d;
+  font-weight: 800;
+  font-style: italic;
 }
 .container .rock-paper-scissor {
   display: flex;

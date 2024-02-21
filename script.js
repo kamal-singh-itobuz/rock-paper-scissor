@@ -1,14 +1,10 @@
 const startButton = document.querySelector('.start');
 const playerPoints = document.querySelector('.player-points');
 const computerPoints = document.querySelector('.computer-points');
-// const moveLeft = document.querySelector('.move-left');
-
 const playerChoice = document.querySelector('.player-choice');
 const computerChoice = document.querySelector('.computer-choice');
 const rockPaperScissor = document.querySelector('.rock-paper-scissor');
-
 const whoWin = document.querySelector('.who-win');
-
 
 const choices = ['rock', 'paper', 'scissor'];
 
@@ -31,31 +27,30 @@ function decide(playerSelect) {
     }
 
     if (Number(computerPoints.innerText) === 5 && Number(playerPoints.innerText) < 5) {
-        computerPoints.innerText = '0';
-        playerPoints.innerText = '0';
-        whoWin.innerText = "Computer Win!!!";
+        whoWin.innerText = "Computer Won!!!";
+        rockPaperScissor.style.pointerEvents = "none";
         whoWin.style.visibility = "visible";
     }
     else if (Number(playerPoints.innerText) === 5 && Number(computerPoints.innerText) < 5) {
-        computerPoints.innerText = '0';
-        playerPoints.innerText = '0';
-        whoWin.innerText = "Hurrahh! Player Win!!!";
+        whoWin.innerText = "Hurrahh! Player Won!!!";
+        rockPaperScissor.style.pointerEvents = "none";
         whoWin.style.visibility = "visible";
     }
     else if (Number(playerPoints.innerText) === 5 && Number(computerPoints.innerText) === 5) {
-        computerPoints.innerText = '0';
-        playerPoints.innerText = '0';
         whoWin.innerText = "Tied";
+        rockPaperScissor.style.pointerEvents = "none";
         whoWin.style.visibility = "visible";
     }
 }
 
 startButton.addEventListener('click', () => {
+    rockPaperScissor.style.pointerEvents = "auto";
     computerPoints.innerText = '0';
     playerPoints.innerText = '0';
+    playerChoice.innerText = '---';
+    computerChoice.innerText = '---';
     whoWin.style.visibility = "hidden";
-    console.log('Game restart');
-})
+});
 
 rockPaperScissor.addEventListener('click', (e) => {
     if (e.target.className === 'rock') {
